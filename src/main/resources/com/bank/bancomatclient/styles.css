@@ -1,0 +1,25 @@
+.backgroundImage{
+   -fx-background-image: url('danske-bankas.jpg');
+   -fx-background-repeat: no-repeat; 
+   -fx-background-size: 600 400; 
+   -fx-background-position: center center;
+}
+
+.button{
+   -fx-background-color: #F0FFF0;
+   -fx-border-radius: 5px;
+   -fx-border-style: solid;
+   -fx-border-color: #dae7f3;
+   -fx-width: 50px;
+   -fx-height: 20px;
+}
+
+.button:hover{
+   -fx-background-color: #dae7f3;
+}
+
+.pininput{
+   -fx-width: 80px;
+   -fx-height: 20px;
+}
+

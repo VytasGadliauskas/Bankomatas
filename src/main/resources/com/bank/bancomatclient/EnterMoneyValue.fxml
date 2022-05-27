@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundImage" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.bancomatclient.EnterMoneyValueController">
+   <children>
+      <Pane layoutX="484.0" layoutY="278.0" onMouseClicked="#button_OnClick" prefHeight="70.0" prefWidth="95.0" styleClass="button" stylesheets="@styles.css">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="95.0" layoutX="10.0" layoutY="-2.0" onMouseClicked="#button_OnClick" pickOnBounds="true" preserveRatio="true" styleClass="image">
+               <image>
+                  <Image url="@icons8-ok-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField fx:id="textValue" alignment="CENTER" layoutX="179.0" layoutY="181.0" prefHeight="75.0" prefWidth="271.0">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </TextField>
+      <Pane layoutX="14.0" layoutY="278.0" onMouseClicked="#button_BackClick" prefHeight="70.0" prefWidth="95.0" styleClass="button" stylesheets="@styles.css">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="95.0" layoutX="10.0" layoutY="-2.0" onMouseClicked="#button_BackClick" pickOnBounds="true" preserveRatio="true" styleClass="image">
+               <image>
+                  <Image url="@icons8-go-back-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="labelEnterValue" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="122.0" prefHeight="36.0" prefWidth="499.0" text="ENTER VALUE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="131.0" fitWidth="193.0" layoutX="249.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-pin-pad-100.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

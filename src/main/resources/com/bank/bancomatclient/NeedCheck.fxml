@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundImage" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.bancomatclient.NeedCheckController">
+   <children>
+      <Pane layoutX="308.0" layoutY="73.0" onMouseClicked="#button_NoClick" prefHeight="70.0" prefWidth="280.0" styleClass="button" stylesheets="@styles.css">
+         <children>
+            <Label fx:id="labelNoCheque" layoutX="5.0" layoutY="20.0" prefHeight="30.0" prefWidth="261.0" text="NO CHEQUE" textFill="#1f09ad">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="308.0" layoutY="165.0" onMouseClicked="#button_YesClick" prefHeight="70.0" prefWidth="280.0" styleClass="button" stylesheets="@styles.css">
+         <children>
+            <Label fx:id="labelPrintCheque" layoutX="7.0" layoutY="20.0" prefHeight="30.0" prefWidth="261.0" text="Printed checks" textFill="#1f09ad">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="233.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-cheque-100.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

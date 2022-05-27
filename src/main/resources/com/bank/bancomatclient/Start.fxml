@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundImage" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.bancomatclient.StartController">
+   <children>
+      <Pane fx:id="buttonLangLT" layoutX="391.0" layoutY="91.0" onMouseClicked="#buttonLangLT_OnClick" prefHeight="70.0" prefWidth="195.0" styleClass="button" stylesheets="@styles.css">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="75.0" layoutX="14.0" layoutY="-2.0" onMouseClicked="#buttonLangLT_OnClick" pickOnBounds="true" preserveRatio="true" styleClass="image">
+               <image>
+                  <Image url="@icons8-lithuania-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="buttonLangEN" layoutX="391.0" layoutY="186.0" onMouseClicked="#buttonLangEN_OnClick" prefHeight="70.0" prefWidth="195.0" styleClass="button" stylesheets="@styles.css">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="75.0" layoutX="14.0" layoutY="-2.0" onMouseClicked="#buttonLangEN_OnClick" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;" styleClass="image">
+               <image>
+                  <Image url="@icons8-great-britain-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="buttonLangRU" layoutX="391.0" layoutY="289.0" onMouseClicked="#buttonLangRU_OnClick" prefHeight="70.0" prefWidth="195.0" styleClass="button" stylesheets="@styles.css">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="75.0" layoutX="14.0" layoutY="-2.0" onMouseClicked="#buttonLangRU_OnClick" pickOnBounds="true" preserveRatio="true" styleClass="image">
+               <image>
+                  <Image url="@icons8-russian-federation-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
