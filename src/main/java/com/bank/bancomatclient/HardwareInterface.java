@@ -2,6 +2,7 @@ package com.bank.bancomatclient;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -23,42 +24,39 @@ public class HardwareInterface {
         return hardwareId;
     }
 
-    public static boolean insertCreditCard() throws FileNotFoundException {
+    public static boolean isCreditCardInserted() throws FileNotFoundException {
         File cereditCard = new File("src/main/resources/BankomatCardEntry/creditcard.txt");
         if (cereditCard.exists()) {
+            // Laikina korteles imitacija jei failas egzistuoja ideta jei ne istraukta
             Scanner card = new Scanner(cereditCard);
             CreditCard.setCardNumber(card.nextLine());
             card.close();
-            System.out.println("Press any key");
-            Scanner scanner = new Scanner(System.in);
-            String resp = scanner.nextLine();
-            scanner.close();
             return true;
         }
         return false;
     }
 
-    public static boolean takeCreditCard() {
-            System.out.println("Press any key");
-            Scanner scanner = new Scanner(System.in);
-            String resp = scanner.nextLine();
-            scanner.close();
-            return true;
+    public static void giveMoney() throws IOException {
+        File money = new File("src/main/resources/MoneyDoor/money.txt");
+        // Laikina pinigu isdavimo durelese imitacija tiesiog sukuriam faila
+        money.createNewFile();
     }
 
-    public static boolean takeMoney() {
-        System.out.println("Press any key");
-        Scanner scanner = new Scanner(System.in);
-        String resp = scanner.nextLine();
-        scanner.close();
-        return true;
+
+     public static boolean isMoneyTaken() throws FileNotFoundException {
+         File money = new File("src/main/resources/MoneyDoor/money.txt");
+         if (money.exists()) {
+             // Laikina pinigu isdavimo durelese imitacija jei failas egzistuoja yra jei ne pasiimti
+             return true;
+         }
+         return false;
     }
 
-    public static String minusMoney(int moneyToTake){
-        if (cachInMacine-moneyToTake <= 0) {
-            return "DONE";
+    public static int minusMoney(int moneyToTake){
+        if (cachInMacine-moneyToTake >= 0) {
+            return cachInMacine-moneyToTake;
         } else {
-            return "NOTMONEY";
+            return -1;
         }
     }
 }

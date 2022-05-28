@@ -15,6 +15,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class InsertCardController implements Initializable {
 
@@ -45,6 +47,23 @@ public class InsertCardController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         labelInsertCreditCard.setText(Languages.getINSERT_CREDIT_CARD(CreditCard.getLanguage()));
         System.out.println("session id "+CreditCard.getSessionId());
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask()
+        {
+            public void run()
+            {
+                try {
+                      if (HardwareInterface.isCreditCardInserted()){
+                          System.out.println("Kortele ideta");
+                          // buttonOK_OnClick();
+                          // Kazkaip reiktu gauti stage handla, dar nezinau kaip
+                      }
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        timer.schedule(task, 1000l);
     }
 
 }
