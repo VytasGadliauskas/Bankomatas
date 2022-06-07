@@ -1,0 +1,19 @@
+
+r
+java:S1192 "PDefine a constant instead of duplicating this literal "InsertCard.fxml" 3 times.(‡…úşÿÿÿÿÿ8å§ûÔ‘0
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ßÕé8Ï­ûÔ‘0
+j	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó±ñ8ß¯ûÔ‘0
+i	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢‰ô8 °ûÔ‘0
+S
+java:S1128"6Remove this unused import 'javafx.fxml.Initializable'.(™ÎùÆ8™ø«ˆ“0
+W
+java:S1128
+"5Remove this unused import 'javafx.scene.layout.Pane'.(êÄƒÄşÿÿÿÿ8á°ûÔ‘0
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8â°ûÔ‘0
+K
+java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8¡ø«ˆ“0
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ä°ûÔ‘0
+W
+java:S1128"5Remove this unused import 'java.util.ResourceBundle'.(ıÆ£¯øÿÿÿÿ8£ø«ˆ“0

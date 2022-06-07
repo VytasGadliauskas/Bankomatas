@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
-public class StartController  implements Initializable {
+public class StartController  {
 
     @FXML
     void buttonLangEN_OnClick(MouseEvent event) throws IOException {
@@ -73,9 +73,4 @@ public class StartController  implements Initializable {
         stage.show();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
-    }
 }

@@ -6,6 +6,7 @@ public class Languages {
     private final static String ENTER_PIN_LT="Įveskite PIN kodą";
     private final static String YOUR_ACCOUNT_HAVE_LT="Jūsų banko sąskaitoje";
     private final static String TAKE_CARD_LT="Paimkite savo kredito kortelę";
+    private final static String TAKE_CARD_BAD_LT="Bloga kredito kortelė";
     private final static String ENTER_VALUE_LT="Įveskite vertę";
     private final static String CHECH_ACCOUNT_LT="Patikrinti sąskaitą";
     private final static String TAKE_MONEY_LT="Paimk pinigus";
@@ -19,6 +20,7 @@ public class Languages {
     private final static String ENTER_PIN_EN="Enter pin";
     private final static String YOUR_ACCOUNT_HAVE_EN="On your account";
     private final static String TAKE_CARD_EN="Take your credit card";
+    private final static String TAKE_CARD_BAD_EN="Bad credit card";
     private final static String ENTER_VALUE_EN="Enter value";
     private final static String CHECK_ACCOUNT_EN="Check account";
     private final static String TAKE_MONEY_EN="Take money";
@@ -32,6 +34,7 @@ public class Languages {
     private final static String ENTER_PIN_RU="Введите пин-код";
     private final static String YOUR_ACCOUNT_HAVE_RU="На ваш банковский счет";
     private final static String TAKE_CARD_RU="Возьми свою кредитную карту";
+    private final static String TAKE_CARD_BAD_RU="Плохая кредитная карта";
     private final static String ENTER_VALUE_RU="Введите значение";
     private final static String CHECK_ACCOUNT_RU="Проверить счет";
     private final static String TAKE_MONEY_RU="Возьми деньги";
@@ -73,6 +76,15 @@ public class Languages {
             case "EN" -> TAKE_CARD_EN;
             case "RU" -> TAKE_CARD_RU;
             default -> TAKE_CARD_EN;
+        };
+    }
+
+    public static String getTAKE_BAD_CARD(String language){
+        return switch (language) {
+            case "LT" -> TAKE_CARD_BAD_LT;
+            case "EN" -> TAKE_CARD_BAD_EN;
+            case "RU" -> TAKE_CARD_BAD_RU;
+            default -> TAKE_CARD_BAD_EN;
         };
     }
 

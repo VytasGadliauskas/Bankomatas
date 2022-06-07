@@ -35,17 +35,28 @@ public class EnterMoneyValueController  implements Initializable {
 
     @FXML
     void button_OnClick(MouseEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
-        Scene scene = new Scene(fxml);
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        CreditCard.setCommandArg(textValue.getText());
+        NetworkClient networkClient = new NetworkClient();
+        String response = networkClient.serverConnectResponce("TAKE_MONEY");
+        if ("DONE".equals(response)) {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NoMoneyOnAccount"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         labelEnterValue.setText(Languages.getENTER_VALUE(CreditCard.getLanguage()));
-        System.out.println("session id "+CreditCard.getSessionId());
     }
 }

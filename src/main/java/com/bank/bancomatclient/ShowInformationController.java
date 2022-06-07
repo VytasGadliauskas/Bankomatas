@@ -31,8 +31,9 @@ public class ShowInformationController implements Initializable  {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        labelInformation.setText(Languages.getYOUR_ACCOUNT_HAVE(CreditCard.getLanguage())+" 100 Eu");
-
-        System.out.println("session id "+CreditCard.getSessionId());
+        String response = "ERROR";
+        NetworkClient networkClient = new NetworkClient();
+        response = networkClient.serverConnectResponce("CHECK_ACCOUNT_MONEY");
+        labelInformation.setText(Languages.getYOUR_ACCOUNT_HAVE(CreditCard.getLanguage())+" "+response+" Eu");
     }
 }

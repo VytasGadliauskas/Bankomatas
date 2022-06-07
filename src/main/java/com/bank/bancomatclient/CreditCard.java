@@ -10,6 +10,7 @@ public class CreditCard {
     public static void setLanguage(String language) {card.put("LANGUAGE", language);}
     public static void setCardNumber(String number) {card.put("NUMBER", number);}
     public static void setCommand(String command) {card.put("COMMAND", command);}
+    public static void setCommandArg(String commandArg) {card.put("COMMANDARG", commandArg);}
     public static void setHwID() {card.put("HWID", HardwareInterface.getHardwareId());}
     public static void setCardPin(String valid) {
         card.put("VALID", valid);
@@ -29,6 +30,9 @@ public class CreditCard {
     }
     public static String getCommand(){
         return card.get("COMMAND");
+    }
+    public static String getCommandArg(){
+        return card.get("COMMANDARG");
     }
     public static void Clear() {
         card.clear();

@@ -40,32 +40,68 @@ public class EnterMoneyCountController  implements Initializable {
 
     @FXML
     void button_Money100Click(MouseEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
-        Scene scene = new Scene(fxml);
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        CreditCard.setCommandArg("100");
+        NetworkClient networkClient = new NetworkClient();
+        String response = networkClient.serverConnectResponce("TAKE_MONEY");
+        if ("DONE".equals(response)) {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NoMoneyOnAccount"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     @FXML
     void button_Money200Click(MouseEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
-        Scene scene = new Scene(fxml);
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        CreditCard.setCommandArg("200");
+        NetworkClient networkClient = new NetworkClient();
+        String response = networkClient.serverConnectResponce("TAKE_MONEY");
+        if ("DONE".equals(response)) {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NoMoneyOnAccount"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     @FXML
     void button_Money50Click(MouseEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
-        Scene scene = new Scene(fxml);
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        CreditCard.setCommandArg("50");
+        NetworkClient networkClient = new NetworkClient();
+        String response = networkClient.serverConnectResponce("TAKE_MONEY");
+        if ("DONE".equals(response)) {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NeedCheck.fxml"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            Parent fxml = FXMLLoader.load(getClass().getResource("NoMoneyOnAccount"));
+            Scene scene = new Scene(fxml);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     @FXML
@@ -81,6 +117,5 @@ public class EnterMoneyCountController  implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         labelbtnEnterMoneyValue.setText(Languages.getENTER_VALUE(CreditCard.getLanguage()));
-        System.out.println("session id "+CreditCard.getSessionId());
     }
 }

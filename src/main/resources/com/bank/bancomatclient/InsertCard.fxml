@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundImage" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.bancomatclient.InsertCardController">
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundImage" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.bancomatclient.InsertCardController">
    <children>
-      <Pane fx:id="buttonOk" layoutX="491.0" layoutY="291.0" onMouseClicked="#buttonOK_OnClick" prefHeight="70.0" prefWidth="95.0" styleClass="button" stylesheets="@styles.css">
-         <children>
-            <ImageView fitHeight="75.0" fitWidth="95.0" layoutX="10.0" layoutY="-2.0" onMouseClicked="#buttonOK_OnClick" pickOnBounds="true" preserveRatio="true" styleClass="image">
-               <image>
-                  <Image url="@icons8-ok-96.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
       <Pane fx:id="buttonBack" layoutX="14.0" layoutY="291.0" onMouseClicked="#buttonBack_OnClick" prefHeight="70.0" prefWidth="95.0" styleClass="button" stylesheets="@styles.css">
          <children>
             <ImageView fitHeight="75.0" fitWidth="95.0" layoutX="10.0" layoutY="-2.0" onMouseClicked="#buttonBack_OnClick" pickOnBounds="true" preserveRatio="true" styleClass="image">

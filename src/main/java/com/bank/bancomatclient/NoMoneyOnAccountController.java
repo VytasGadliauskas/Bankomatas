@@ -32,6 +32,5 @@ public class NoMoneyOnAccountController implements Initializable  {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         labelInformation.setText(Languages.getNO_MONEY_ON_ACCOUNT(CreditCard.getLanguage()));
-        System.out.println("session id "+CreditCard.getSessionId());
     }
 }

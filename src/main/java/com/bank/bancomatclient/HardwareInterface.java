@@ -1,9 +1,11 @@
 package com.bank.bancomatclient;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Scanner;
+
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  *  Klase imituojanti rysi su banko masina
@@ -24,16 +26,14 @@ public class HardwareInterface {
         return hardwareId;
     }
 
-    public static boolean isCreditCardInserted() throws FileNotFoundException {
-        File cereditCard = new File("src/main/resources/BankomatCardEntry/creditcard.txt");
-        if (cereditCard.exists()) {
-            // Laikina korteles imitacija jei failas egzistuoja ideta jei ne istraukta
-            Scanner card = new Scanner(cereditCard);
-            CreditCard.setCardNumber(card.nextLine());
-            card.close();
-            return true;
+    public static String getCreditCardNumber() throws IOException {
+        Path path = Paths.get("/sys/devices/pci0000:00/0000:00:14.0/usb3/3-9/serial");
+        String content = "";
+        if(path.toFile().isFile()){
+            content = Files.readString(path);
+            System.out.println(" USB serial number " +content);
         }
-        return false;
+        return content;
     }
 
     public static void giveMoney() throws IOException {
